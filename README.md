@@ -94,7 +94,7 @@ src
 |__ db/	
 	|__ migrate/
 	|__ schema.rb/
-	|__ seeds.rb/
+	|__ seeds.rb/```
 
 
  
