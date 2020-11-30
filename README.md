@@ -3,7 +3,7 @@ Wannit Shopping List
 
 Overview
 
-Wannit is a wish list app that allows users to enter items that they need and then are able to list stores where said items can be bought or picked up.  This tool would be fantastic for those who are attending upcoming birthday parties or holiday events that involve gift exchanges. The NeedThat app is the perfect tool to share your gift ideas with others to let them know what you may be interested in.
+Wannit is a wish list app that allows users to enter items that they need and then are able to list stores where said items can be bought or picked up.  This tool would be fantastic for those who are attending upcoming birthday parties or holiday events that involve gift exchanges. The Wannit app is the perfect tool to share your gift ideas with others to let them know what you may be interested in.
 
 MVP
 
