@@ -41,7 +41,7 @@ https://whimsical.com/wannit-Jdxh5cSRucUPJgoyBMj8pK
 
 Component Hierarchy
 
-app
+```app
 |__ assets/
       |__ fonts
       |__ images
@@ -94,7 +94,8 @@ src
 |__ db/	
 	|__ migrate/
 	|__ schema.rb/
-	|__ seeds.rb/```
+	|__ seeds.rb/
+	```
 
 
  
