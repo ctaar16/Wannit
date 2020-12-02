@@ -16,6 +16,7 @@ class LocationsController < ApplicationController
   # POST /locations
   def create
     @location = Location.new(location_params)
+    @location.user = @current_user
    
 
     if @location.save
@@ -34,7 +35,7 @@ class LocationsController < ApplicationController
     end
   end
 
-  # DELETE /locations/1
+  # DELETE /locations
   def destroy
     @location.destroy
   end

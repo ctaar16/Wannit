@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function ItemEdit(props) {
+export default function LocationEdit(props) {
   const [formData, setFormData] = useState({
     name: ''
   })
@@ -9,15 +9,15 @@ export default function ItemEdit(props) {
 
   useEffect(() => {
     const prefillForm = () => {
-      const itemItem = props.items.find(item => item.id === Number(id));
+      const locationLocation = props.locations.find(location => location.id === Number(id));
       setFormData({
-        name: itemItem.name
+        name: locationLocation.name
       })
     }
-    if (props.items.length){
+    if (props.locations.length){
       prefillForm();
     }
-  }, [props.items])
+  }, [props.locations])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

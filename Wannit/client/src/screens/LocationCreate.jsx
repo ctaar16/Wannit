@@ -1,23 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from 'react'
 
-export default function ItemEdit(props) {
+export default function LocationCreate(props) {
   const [formData, setFormData] = useState({
     name: ''
   })
-  const { id } = useParams();
-
-  useEffect(() => {
-    const prefillForm = () => {
-      const itemItem = props.items.find(item => item.id === Number(id));
-      setFormData({
-        name: itemItem.name
-      })
-    }
-    if (props.items.length){
-      prefillForm();
-    }
-  }, [props.items])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,9 +16,9 @@ export default function ItemEdit(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      props.handleUpdate(id, formData);
+      props.handleCreate(formData);
     }}>
-      <h3>Edit Item</h3>
+      <h3>Create Location</h3>
       <label>Name:
         <input
           type='text'

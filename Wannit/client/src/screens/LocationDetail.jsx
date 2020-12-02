@@ -3,29 +3,29 @@ import { useParams } from 'react-router-dom';
 import { addLocation } from '../services/locations';
 import { getOneItem } from '../services/items';
 
-export default function ItemDetail(props) {
-  const [itemItem, setItemItem] = useState(null);
+export default function LocationDetail(props) {
+  const [locationLocation, setLocationLocation] = useState(null);
   const [locationId, setLocationId] = useState('')
   // We can grab the id of the one food from the url params
   const { id } = useParams();
 
   // In the useEffect, we make an api call to get the one food and set it in local state
   useEffect(() => {
-    const fetchItemItem = async () => {
-      const itemData = await getOneItem(id);
-      setItemItem(itemData);
+    const fetchLocationLocation = async () => {
+      const locationData = await getOneLocation(id);
+      setLocationLocation(locationData);
     }
-    fetchItemItem();
+    fetchLocationLocation();
   }, [id])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const itemItem = await addLocation(locationId, id);
+    const locationLocation = await addLocation(locationId, id);
     // I changed our response on the backend for this route.
     // instead of getting a list of just the flavors,
     // I grab the whole food object with it's flavors
     // This makes it easy to replace our state with the updated data.
-    setItemItem(itemItem);
+    setLocationLocation(locationLocation);
   }
 
   // this is the handleChange for the select drop down
@@ -37,8 +37,8 @@ export default function ItemDetail(props) {
 
   return (
     <div>
-      <h3>{itemItem?.name}</h3>
-      {itemItem?.locations.map(location => (
+      <h3>{locationLocation?.name}</h3>
+      {locationLocation?.locations.map(location => (
         <p key={location.id}>{location.name}</p>
       ))}
       {/* below is our for for the flavor drop down */}

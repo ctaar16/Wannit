@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 import Locations from '../screens/Locations';
+import LocationEdit from '../screens/LocationEdit';
+import LocationCreate from '../screens/LocationCreate';
 import ItemCreate from '../screens/ItemCreate';
 import ItemDetail from '../screens/ItemDetail';
 import ItemEdit from '../screens/ItemEdit';
 import Items from '../screens/Items';
-import { getAllLocations } from '../services/locations'
+import { getAllLocations, postLocation, putLocation, destroyLocation } from '../services/locations'
 import { destroyItem, getAllItems, postItem, putItem } from '../services/items'
+
 
 export default function MainContainer(props) {
   const [locations, setLocations] = useState([]);
@@ -69,6 +72,25 @@ export default function MainContainer(props) {
           currentUser={props.currentUser}
         />
       </Route>
+
+      <Route path="/locations/new">
+        <LocationCreate handleCreate={handleCreate} />
+        </Route>
+
+
+      <Route path = '/locations/:id/edit'>
+        <LocationEdit locations={locations} handleUpdate={handleUpdate} />
+      </Route>
+      <Route>
+        <Locations
+        locations={locations}
+        handleDelete={handleDelete}
+        currentUser={props.currentUser}
+        />
+        </Route>
+       
+
+
     </Switch>
   )
 }
