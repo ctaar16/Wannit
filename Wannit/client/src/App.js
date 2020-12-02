@@ -9,10 +9,6 @@ import Register from './screens/Register';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 
-
-
-
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory()
@@ -48,8 +44,6 @@ function App() {
   }
 
 
-
-
   return (
     <div className="App">
       <Layout
@@ -57,6 +51,11 @@ function App() {
       handleLogout={handleLogout}
       >
       <Switch>
+
+      <Route path='/'>
+          {/* container */}
+          <MainContainer currentUser={currentUser} />
+        </Route>
 
         <Route path='/login'>
           {/* login */}
@@ -68,10 +67,7 @@ function App() {
           <Register handleRegister={handleRegister} />
         </Route>
 
-        <Route path='/'>
-          {/* container */}
-          <MainContainer currentUser={currentUser} />
-        </Route>
+      
 
       </Switch>
       </Layout>

@@ -10,6 +10,7 @@ import ItemEdit from '../screens/ItemEdit';
 import Items from '../screens/Items';
 import { getAllLocations, postLocation, putLocation, destroyLocation } from '../services/locations'
 import { destroyItem, getAllItems, postItem, putItem } from '../services/items'
+import Homepage from '../screens/Homepage';
 
 
 export default function MainContainer(props) {
@@ -36,6 +37,15 @@ export default function MainContainer(props) {
     history.push('/items');
   }
 
+  const handleLocationCreate = async (locationData) => {
+    const newLocation = await postLocation(locationData);
+    setLocations(prevState => [...prevState, newLocation]);
+    history.push('/locations');
+  }
+
+  
+
+
   const handleUpdate = async (id, itemData) => {
     const updatedItem = await putItem(id, itemData);
     setItems(prevState => prevState.map(item => {
@@ -44,16 +54,37 @@ export default function MainContainer(props) {
     history.push('/items');
   }
 
+  const handleUpdateLocation = async (id, locationData) => {
+    const updatedLocation = await putLocation(id, locationData);
+    setLocations(prevState => prevState.map(location => {
+      return location.id === Number(id) ? updatedLocation : location
+    }))
+    history.push('/locations');
+  }
+
+
+
+
   const handleDelete = async (id) => {
     await destroyItem(id);
     setItems(prevState => prevState.filter(item => item.id !== id))
   }
 
+
+  const handleDeleteLocation = async (id) => {
+    await destroyLocation(id);
+    setLocations(prevState => prevState.filter(location => location.id !== id))
+  }
+
+
   return (
     <Switch>
-      <Route path='/locations'>
+      {/* <Route exact path = '/'>
+        <Homepage  />
+      </Route> */}
+      {/* <Route path='/locations'>
         <Locations locations={locations} />
-      </Route>
+      </Route> */}
       <Route path='/items/:id/edit'>
         <ItemEdit items={items} handleUpdate={handleUpdate} />
       </Route>
@@ -74,17 +105,17 @@ export default function MainContainer(props) {
       </Route>
 
       <Route path="/locations/new">
-        <LocationCreate handleCreate={handleCreate} />
+        <LocationCreate handleCreate={handleLocationCreate} />
         </Route>
 
 
       <Route path = '/locations/:id/edit'>
-        <LocationEdit locations={locations} handleUpdate={handleUpdate} />
+        <LocationEdit locations={locations} handleUpdate={handleUpdateLocation} />
       </Route>
       <Route>
-        <Locations
+        <Locations path = '/locations'
         locations={locations}
-        handleDelete={handleDelete}
+        handleDelete={handleDeleteLocation}
         currentUser={props.currentUser}
         />
         </Route>

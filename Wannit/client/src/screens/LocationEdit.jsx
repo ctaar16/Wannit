@@ -32,7 +32,7 @@ export default function LocationEdit(props) {
       e.preventDefault();
       props.handleUpdate(id, formData);
     }}>
-      <h3>Edit Item</h3>
+      <h3>Edit Location</h3>
       <label>Name:
         <input
           type='text'

@@ -21,8 +21,8 @@ export default function Register(props) {
       e.preventDefault();
       props.handleRegister(formData);
     }}>
-      <h3>Register</h3>
-      <label>Username:
+      <h3 className = "username">Register</h3>
+      <label className = "username">Username:
         <input
           type='text'
           name='username'
@@ -31,7 +31,7 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <label>Email:
+      <label className = "username">Email:
         <input
           type='text'
           name='email'
@@ -40,7 +40,7 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <label>Password:
+      <label className = "username">Password:
         <input
           type='password'
           name='password'
@@ -49,8 +49,8 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <Link to='/login'>Already have an account? Login Here!</Link>
-      <button>Submit</button>
+      <Link className = "username" to='/login'>Already have an account? Login Here!</Link>
+      <button className = "username">Submit</button>
     </form>
   )
 }
