@@ -31,6 +31,10 @@ export default function MainContainer(props) {
     fetchItems();
   }, [])
 
+
+
+
+  
   const handleCreate = async (itemData) => {
     const newItem = await postItem(itemData);
     setItems(prevState => [...prevState, newItem]);
@@ -70,7 +74,6 @@ export default function MainContainer(props) {
     setItems(prevState => prevState.filter(item => item.id !== id))
   }
 
-
   const handleDeleteLocation = async (id) => {
     await destroyLocation(id);
     setLocations(prevState => prevState.filter(location => location.id !== id))
@@ -79,12 +82,12 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      {/* <Route exact path = '/'>
+      <Route exact path = '/'>
         <Homepage  />
-      </Route> */}
-      {/* <Route path='/locations'>
+      </Route>
+      <Route path='/locations'>
         <Locations locations={locations} />
-      </Route> */}
+      </Route>
       <Route path='/items/:id/edit'>
         <ItemEdit items={items} handleUpdate={handleUpdate} />
       </Route>
