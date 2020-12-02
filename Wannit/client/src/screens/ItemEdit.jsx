@@ -32,16 +32,16 @@ export default function ItemEdit(props) {
       e.preventDefault();
       props.handleUpdate(id, formData);
     }}>
-      <h3>Edit Item</h3>
-      <label>Name:
-        <input
+      <h3 className="username">Edit Item</h3>
+      <label className="username">Name:
+        <input className="username"
           type='text'
           name='name'
           value={formData.name}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <button className="username">Submit</button>
     </form>
   )
 }

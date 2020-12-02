@@ -18,8 +18,8 @@ export default function LocationCreate(props) {
       e.preventDefault();
       props.handleCreate(formData);
     }}>
-      <h3>Create Location</h3>
-      <label>Name:
+      <h3 className="username">Create Location</h3>
+      <label className="username">Name:
         <input
           type='text'
           name='name'
@@ -27,7 +27,7 @@ export default function LocationCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <button className="username">Submit</button>
     </form>
   )
 }

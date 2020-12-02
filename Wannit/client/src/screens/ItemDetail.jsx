@@ -37,25 +37,25 @@ export default function ItemDetail(props) {
 
   return (
     <div>
-      <h3>{itemItem?.name}</h3>
+      <h3 className="username">{itemItem?.name}</h3>
       {itemItem?.locations.map(location => (
-        <p key={location.id}>{location.name}</p>
+        <p  key={location.id}>{location.name}</p>
       ))}
       {/* below is our for for the flavor drop down */}
       <form onSubmit={handleSubmit}>
-        <select defaultValue='default' onChange={handleChange}>
+        <select className="username" defaultValue='default' onChange={handleChange}>
           {/* we can set a default value to tell people to select a flavor*/}
           {/* the "defaultValue" on the <select> tag needs to match the "value" on our default <option> tag */}
           {/* we also add the "disabled" in the <option> to prevent users from selecting it*/}
-          <option disabled value='default'>-- Select a location --</option>
+          <option  disabled value='default'>-- Select a location --</option>
           {/* now we loop over all flavors and return an <option> tag for each */}
           {props.locations.map(location => (
             // we track the flavor's id as the "value" which will get added to state onChange
             // the flavor's name goes between the open and close tag which is what the user sees
-            <option value={location.id} key={location.id}>{location.name}</option>
+            <option  value={location.id} key={location.id}>{location.name}</option>
           ))}
         </select>
-        <button>add</button>
+        <button className="username">add</button>
       </form>
     </div>
   )
