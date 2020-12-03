@@ -35,6 +35,12 @@ export default function ItemDetail(props) {
     setLocationId(value);
   }
 
+  const filterFN = location => { 
+   const idArr = itemItem.locations.map(loc=>loc.id)    //array of ids
+   return !idArr.includes(location.id)    // should provide a t/f value
+  
+  }
+
   return (
     <div>
       <h3 className="username">{itemItem?.name}</h3>
@@ -49,7 +55,7 @@ export default function ItemDetail(props) {
           {/* we also add the "disabled" in the <option> to prevent users from selecting it*/}
           <option  disabled value='default'>-- Select a location --</option>
           {/* now we loop over all flavors and return an <option> tag for each */}
-          {props.locations.map(location => (
+          {itemItem && props.locations.filter(filterFN).map(location => (
             // we track the flavor's id as the "value" which will get added to state onChange
             // the flavor's name goes between the open and close tag which is what the user sees
             <option  value={location.id} key={location.id}>{location.name}</option>
