@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import MainContainer from './containers/MainContainer'
-import Homepage from './screens/Homepage'
 import Layout from './layouts/Layout';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -23,7 +22,7 @@ function App() {
       }
     }
     handleVerify();
-  }, [])
+  }, [history])
 
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
@@ -53,11 +52,7 @@ function App() {
       >
       <Switch>
 
-      <Route path='/'>
-          {/* container */}
-          <MainContainer currentUser={currentUser} />
-        </Route>
-
+      
         <Route path='/login'>
           {/* login */}
           <Login handleLogin={handleLogin} />
@@ -68,7 +63,11 @@ function App() {
           <Register handleRegister={handleRegister} />
         </Route>
 
-      
+        <Route path='/'>
+          {/* container */}
+          <MainContainer currentUser={currentUser} />
+        </Route>
+
 
       </Switch>
       </Layout>

@@ -1,19 +1,15 @@
 
 * {
   text-align: center;
-  background-color: rgb(36, 36, 245);
-}
-
-
-.App {
-  text-align: center;
-  background-color: rgb(36, 36, 245);
+  background-color: #0CCA4A;
+  font-family: 'Audiowide';
 }
 
 
 .header{
   background-color: 3446EE;
   color: white;
+  
 }
 
 .username {
@@ -33,4 +29,22 @@
 .locationsb {
   color: white;
   padding-left: 5px;
+}
+
+.title {
+  font-family: 'Audiowide';
+}
+
+@media screen and (min-width: 760px) {
+  * {
+    background-color: #0081A7;
+  }
+}
+
+@media screen and (min-width: 370px) {
+  *{
+    
+    background-color:#3446EE;
+    color: black;
+  }
 }

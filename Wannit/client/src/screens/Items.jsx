@@ -11,7 +11,7 @@ export default function Items(props) {
           <React.Fragment key={item.id}>
             <Link to={`/items/${item.id}`}><p className="username">{item.name}</p></Link>
             {
-              // item.user_id === props.currentUser?.id &&
+              item.user_id === props.currentUser?.id &&
               <>
                 <Link to={`/items/${item.id}/edit`}><button className="username">Edit</button></Link>
                 <button className="username" onClick={() => props.handleDelete(item.id)}>Delete</button>
