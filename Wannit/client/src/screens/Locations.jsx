@@ -14,8 +14,8 @@ export default function Locations(props) {
               
               // location.user_id === props.currentUser?.id &&
               <>
-                <Link to={`/locations/${location.id}/edit`}><button className="username">Edit</button></Link>
-                <button className="username" onClick={() => props.handleDeleteLocation(location.id)}>Delete</button>
+                <Link to={`/locations/${location.id}/edit`}><button className="button">Edit</button></Link>
+                <button className="button" onClick={() => props.handleDeleteLocation(location.id)}>Delete</button>
              
               </>
             }

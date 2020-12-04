@@ -61,7 +61,7 @@ export default function ItemDetail(props) {
             <option  value={location.id} key={location.id}>{location.name}</option>
           ))}
         </select>
-        <button className="username">add</button>
+        <button className = "button">add</button>
       </form>
     </div>
   )

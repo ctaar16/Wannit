@@ -27,7 +27,7 @@ export default function ItemCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <button className = "button">Submit</button>
     </form>
   )
 }

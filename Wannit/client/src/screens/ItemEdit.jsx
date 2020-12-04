@@ -41,7 +41,7 @@ export default function ItemEdit(props) {
           onChange={handleChange}
         />
       </label>
-      <button className="username">Submit</button>
+      <button className = "button">Submit</button>
     </form>
   )
 }

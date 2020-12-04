@@ -80,6 +80,11 @@ export default function MainContainer(props) {
   };
 
   return (
+
+    <div className = "divbody">
+    
+    
+
     <Switch>
       <Route path="/items/:id/edit">
         <ItemEdit items={items} handleUpdate={handleUpdate} />
@@ -124,6 +129,9 @@ export default function MainContainer(props) {
       <Route exact path="/">
         <Homepage />
       </Route>
+    
     </Switch>
+
+    </div>
   );
 }

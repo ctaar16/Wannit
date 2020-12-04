@@ -13,15 +13,15 @@ export default function Items(props) {
             {
               item.user_id === props.currentUser?.id &&
               <>
-                <Link to={`/items/${item.id}/edit`}><button className="username">Edit</button></Link>
-                <button className="username" onClick={() => props.handleDelete(item.id)}>Delete</button>
+                <Link to={`/items/${item.id}/edit`}><button className="button">Edit</button></Link>
+                <button className="button" onClick={() => props.handleDelete(item.id)}>Delete</button>
               </>
             }
           </React.Fragment>
         ))
       }
       <br />
-      <Link to='/items/new'><button className="username">Create</button></Link>
+      <Link to='/items/new'><button className="button">Create</button></Link>
     </div>
   )
 }
