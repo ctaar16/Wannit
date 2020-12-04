@@ -79,9 +79,17 @@ export default function MainContainer(props) {
     );
   };
 
+    let backgroundImage = {
+      backgroundImage: "url(/assets/tilebackground.png)",
+      backgroundSize: "cover",
+      border: "solid 2px rgb(19, 238, 118)",
+      
+    }
+
+
   return (
 
-    <div className = "divbody">
+    <div className = "divbody"   style = {backgroundImage}>
     
     
 
