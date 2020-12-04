@@ -35,6 +35,9 @@ export default function MainContainer(props) {
     fetchItems();
   }, []);
 
+ 
+
+
   const handleCreate = async (itemData) => {
     const newItem = await postItem(itemData);
     setItems((prevState) => [...prevState, newItem]);
@@ -82,7 +85,7 @@ export default function MainContainer(props) {
     let backgroundImage = {
       backgroundImage: "url(/assets/tilebackground.png)",
       backgroundSize: "cover",
-      border: "solid 2px rgb(19, 238, 118)",
+      border: "solid 2px blue",
       
     }
 

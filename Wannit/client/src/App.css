@@ -7,7 +7,6 @@
 
 .header{
   height: auto;
-  background-color: #3446EE;
   color: white;
   -webkit-text-stroke: .7px black;
   background-image: url(https://unineststudents.ie/sites/unineststudents_ie/files/inline-images/background-bags-black-346751%20%281%29.jpg);
@@ -24,7 +23,7 @@
 
 .username {
   color: white;
-  border: solid 2px rgb(240, 153, 22);
+  
 }
 
 .button{
@@ -74,7 +73,7 @@
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
   height: 50px;
-  border: solid 2px rgb(241, 12, 12);
+  border: solid 2px blue;
 }
 
 .login {
