@@ -16,6 +16,10 @@ import {
 } from "../services/locations";
 import { destroyItem, getAllItems, postItem, putItem } from "../services/items";
 import Homepage from "../screens/Homepage";
+import tilebackground from '../assets/tilebackground.png';
+
+
+
 
 export default function MainContainer(props) {
   const [locations, setLocations] = useState([]);
@@ -83,7 +87,7 @@ export default function MainContainer(props) {
   };
 
     let backgroundImage = {
-      backgroundImage: "url(/assets/tilebackground.png)",
+      backgroundImage: `url(${tilebackground})`,
       backgroundSize: "cover",
       border: "solid 2px 2px 0px 2px blue",
       
