@@ -40,7 +40,7 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <Link className = "username" to='/register'>Don't have an account? Register Here</Link>
+      <Link className = "li" to='/register'>Don't have an account? Register Here</Link>
       <button className = "button">Submit</button>
     </form>
     </div>

@@ -1,14 +1,15 @@
 
 * {
   text-align: center;
-  font-family: 'Audiowide';
+  font-family: 'Libre Franklin', sans-serif;;
+  
 }
 
 
 .header{
   height: auto;
   color: white;
-  -webkit-text-stroke: .7px black;
+ 
   background-image: url(https://unineststudents.ie/sites/unineststudents_ie/files/inline-images/background-bags-black-346751%20%281%29.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,54 +17,89 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: bottom;
-  border: solid 2px blue;
 }
 
 
 
 .username {
   color: white;
-  
+  font-size: 25px;
+  -webkit-text-stroke: .7px black;
 }
 
 .button{
   color: white;
-  background-color:#35393c;
+  background-color: rgb(121, 20, 20) ;
+  padding: 5px;
+  margin:2px;
+  border-radius: 10px;
+}
+
+.li {
+  font-size: 14px;
+}
+
+.text{
+  color: white;
+}
+
+.box{
+  color: black;
+  
+}
+
+
+.text1{
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0px 30px;
+}
+
+.text2{
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.list{
+  color:black;
 }
 
 .itemsb{
-  color: black;
-  padding-right: 15px;
-  font-size: 30px;
+  color: white;
+  padding: px;
+  font-size: 18px;
+  display: flexbox;
+  flex-direction: row;
 }
 
 .locationsb {
   color:black;
-  padding-left: 15px;
-  font-size: 30px;
+  padding: 3px;
+  font-size: 18px;
 }
 
 .logout {
   color: black;
-  padding-right: 15px;
+  padding: 2px;
   font-size: 18px;
   text-align: center;
 }
-
 
 .title {
   color:black;
 }
 
-
 .Appname{
   color:rgb(241, 242, 249);
   font-size: 150px;
+
 }
 .slogan{
   font-size: 80px;
 }
-
 
 .line{
   opacity: 0;
@@ -73,38 +109,64 @@
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
   height: 50px;
-  border: solid 2px blue;
+  color: white;
+  position: relative;
+  bottom: 0;
+  box-shadow: 0 20vh 0 20vh #000;
+  padding: 40px;
 }
 
-.login {
-  background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
-  background-size: cover;
-}
 
-.reg {
+.reg, .login {
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
 }
 
 .user{
   font-size: 40px;
+  -webkit-text-stroke: .7px black;
+}
+
+.home {
+  color: white;
+}
+
+.mid{
+  padding: 100px
 }
 
 
-/* @media screen and (max-width: 760px) {
+.ch{
+padding: 40px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 760px) {
   .App {
-    font-size: 100px;
+    font-size: 1.5rem;
   }
+
+  .Appname{
+    font-size: 5rem;
+  }
+
   .slogan{
-    font-size: 80px;
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 370px) {
   .Appname {
-    font-size: 80px;
+    font-size: 2rem;
+  }
+  .Appname{
+    font-size: 5rem;
   }
   .slogan{
-    font-size: 60px;
+    font-size: 2rem;
   }
-} */
+}

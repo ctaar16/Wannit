@@ -5,11 +5,11 @@ export default function Items(props) {
   console.log(props)
   return (
     <div>
-      <h3 className="username">Items</h3>
+      <h3 className="text1">Items</h3>
       {
         props.items.map(item => (
           <React.Fragment key={item.id}>
-            <Link to={`/items/${item.id}`}><p className="username">{item.name}</p></Link>
+            <Link to={`/items/${item.id}`}><p className="text2">{item.name}</p></Link>
             {
               item.user_id === props.currentUser?.id &&
               <>

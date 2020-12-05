@@ -13,17 +13,17 @@ export default function Header(props) {
         currentUser ?
           <>
             <p className="user">{currentUser.username}</p>
-            <button className="logout"  onClick={handleLogout}>Logout</button>
+            <button className="button"  onClick={handleLogout}>Logout</button>
           </>
           :
-          <Link className ="button" to='/login'><button>Login/Register</button></Link>
+          <Link  to='/login'><button className ="button">Login / Register</button></Link>
       }
       <hr className="line"/>
       {
         currentUser &&
         <>
-          <Link className ="itemsb" to='/items'><button>Items List</button></Link>
-          <Link className ="locationsb" to='/locations'><button>Locations List</button></Link>
+          <Link  to='/items'><button className ="button">Items List</button></Link>
+          <Link to='/locations'><button className ="button">Locations List</button></Link>
         </>
       }
     </div>

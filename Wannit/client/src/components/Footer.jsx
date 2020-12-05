@@ -5,7 +5,7 @@ export default function Footer(props) {
     const { currentUser, handleLogout } = props;
         return (
             <div className = "footer">
-                <h4>Developed by: Chris Haar</h4>
+                <h6 className="ch">Developed by: Chris Haar</h6>
             </div>
         )
 

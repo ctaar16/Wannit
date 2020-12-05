@@ -50,8 +50,8 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <Link className = "username" to='/login'>Already have an account? Login Here!</Link>
-      <button className = "username">Submit</button>
+      <Link className = "li" to='/login'>Already have an account? Login Here!</Link>
+      <button className = "button">Submit</button>
     </form>
     </div>
   )

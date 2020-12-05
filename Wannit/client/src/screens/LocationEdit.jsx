@@ -34,7 +34,7 @@ export default function LocationEdit(props) {
     }}>
       <h3>Edit Location</h3>
       <label>Name:
-        <input
+        <input className="box"
           type='text'
           name='name'
           value={formData.name}

@@ -85,7 +85,7 @@ export default function MainContainer(props) {
     let backgroundImage = {
       backgroundImage: "url(/assets/tilebackground.png)",
       backgroundSize: "cover",
-      border: "solid 2px blue",
+      border: "solid 2px 2px 0px 2px blue",
       
     }
 

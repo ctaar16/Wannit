@@ -34,7 +34,7 @@ export default function ItemEdit(props) {
     }}>
       <h3 className="username">Edit Item</h3>
       <label className="username">Name:
-        <input className="username"
+        <input className="box"
           type='text'
           name='name'
           value={formData.name}
