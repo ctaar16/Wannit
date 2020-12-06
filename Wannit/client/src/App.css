@@ -10,7 +10,7 @@
   height: auto;
   color: white;
  
-  /* background-image: url("/assets/header.jpg"); */
+  
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -24,7 +24,7 @@
 .username {
   color: white;
   font-size: 25px;
-  -webkit-text-stroke: .7px black;
+  
 }
 
 .button{
@@ -34,6 +34,7 @@
   margin:2px;
   border-radius: 10px;
 }
+
 
 .li {
   font-size: 14px;
@@ -45,7 +46,6 @@
 
 .box{
   color: black;
-  
 }
 
 
@@ -95,8 +95,9 @@
 .Appname{
   color:rgb(241, 242, 249);
   font-size: 150px;
-
 }
+
+
 .slogan{
   font-size: 80px;
 }

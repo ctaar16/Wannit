@@ -38,10 +38,11 @@ export default function Login(props) {
           value={formData.password}
           onChange={handleChange}
         />
+          <button className = "button">Submit</button>
       </label>
       <br />
       <Link className = "li" to='/register'>Don't have an account? Register Here</Link>
-      <button className = "button">Submit</button>
+      
     </form>
     </div>
   )

@@ -48,10 +48,11 @@ export default function Register(props) {
           value={formData.password}
           onChange={handleChange}
         />
+        <button className = "button">Submit</button>
       </label>
       <br />
       <Link className = "li" to='/login'>Already have an account? Login Here!</Link>
-      <button className = "button">Submit</button>
+      
     </form>
     </div>
   )
