@@ -24,7 +24,7 @@
 .username {
   color: white;
   font-size: 25px;
-  
+  justify-content: center;
 }
 
 .button{

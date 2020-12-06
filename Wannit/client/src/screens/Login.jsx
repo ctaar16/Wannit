@@ -38,12 +38,21 @@ export default function Login(props) {
           value={formData.password}
           onChange={handleChange}
         />
-          <button className = "button">Submit</button>
+          
       </label>
+      
       <br />
-      <Link className = "li" to='/register'>Don't have an account? Register Here</Link>
+      
+      <div>
+      <button className = "button">Submit</button>
+      </div>
+      
+      
       
     </form>
+
+    <Link className = "li" to='/register'>Don't have an account? Register Here</Link>
+
     </div>
   )
 }

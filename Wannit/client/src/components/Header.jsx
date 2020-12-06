@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import headerBackground from '../assets/header.jpg'
 
 
 export default function Header(props) {
   const { currentUser, handleLogout } = props;
+  const location = useLocation()
+  
+
+
+
+
 
   return (
     <div className = "header" style = {{backgroundImage: `url(${headerBackground})`}}>
@@ -18,7 +24,13 @@ export default function Header(props) {
             <button className="button"  onClick={handleLogout}>Logout</button>
           </>
           :
-          <Link  to='/login'><button className ="button">Login / Register</button></Link>
+        <>
+        {location.pathname !== "/login" && location.pathname !== "/register" && 
+        <Link  to='/login'><button className ="button">Login / Register</button></Link>
+        }
+        </>
+
+          
       }
       <hr className="line"/>
       {
