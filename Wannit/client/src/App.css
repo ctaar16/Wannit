@@ -5,12 +5,14 @@
   
 }
 
+.App {
+height: 100vh;
+background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
+}
 
 .header{
   height: auto;
   color: white;
- 
-  
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -117,13 +119,18 @@
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
   color: white;
+  
   /* box-shadow: 0 5vh 0 5vh #000; */
 }
 
+.kashiff{
+  height: 20vh;
+}
 
 .reg, .login {
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
+  height: 110vh;
 }
 
 .user{

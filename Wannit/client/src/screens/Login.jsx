@@ -57,7 +57,7 @@ export default function Login(props) {
       <Link className="li" to="/register">
         Don't have an account? Register Here
       </Link>
-      {/* <Footer /> */}
+      
     </div>
   );
 }

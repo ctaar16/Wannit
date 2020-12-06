@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-
 import Locations from "../screens/Locations";
 import LocationEdit from "../screens/LocationEdit";
 import LocationCreate from "../screens/LocationCreate";
@@ -16,10 +15,7 @@ import {
 } from "../services/locations";
 import { destroyItem, getAllItems, postItem, putItem } from "../services/items";
 import Homepage from "../screens/Homepage";
-import tilebackground from '../assets/tilebackground.png';
-
-
-
+import tilebackground from "../assets/tilebackground.png";
 
 export default function MainContainer(props) {
   const [locations, setLocations] = useState([]);
@@ -38,9 +34,6 @@ export default function MainContainer(props) {
     fetchLocations();
     fetchItems();
   }, []);
-
- 
-
 
   const handleCreate = async (itemData) => {
     const newItem = await postItem(itemData);
@@ -86,67 +79,60 @@ export default function MainContainer(props) {
     );
   };
 
-    let backgroundImage = {
-      backgroundImage: `url(${tilebackground})`,
-      backgroundSize: "cover",
-      border: "solid 2px 2px 0px 2px blue",
-      
-    }
-
+  let backgroundImage = {
+    backgroundImage: `url(${tilebackground})`,
+    backgroundSize: "cover",
+    border: "solid 2px 2px 0px 2px blue",
+  };
 
   return (
+    <div className="divbody" style={backgroundImage}>
+      <Switch>
+        <Route path="/items/:id/edit">
+          <ItemEdit items={items} handleUpdate={handleUpdate} />
+        </Route>
 
-    <div className = "divbody"   style = {backgroundImage}>
-    
-    
+        <Route path="/items/new">
+          <ItemCreate handleCreate={handleCreate} />
+        </Route>
+        {/* Here, we're adding a route for our single item screen */}
+        {/* we're passing it "locations" to use in our drop down form */}
+        <Route path="/items/:id">
+          <ItemDetail locations={locations} />
+        </Route>
 
-    <Switch>
-      <Route path="/items/:id/edit">
-        <ItemEdit items={items} handleUpdate={handleUpdate} />
-      </Route>
+        <Route path="/locations/new">
+          <LocationCreate handleCreate={handleLocationCreate} />
+        </Route>
 
-      <Route path="/items/new">
-        <ItemCreate handleCreate={handleCreate} />
-      </Route>
-      {/* Here, we're adding a route for our single food screen */}
-      {/* we're passing it "flavors" to use in our drop down form */}
-      <Route path="/items/:id">
-        <ItemDetail locations={locations} />
-      </Route>
+        <Route path="/locations/:id/edit">
+          <LocationEdit
+            locations={locations}
+            handleUpdate={handleUpdateLocation}
+          />
+        </Route>
 
-      <Route path="/locations/new">
-        <LocationCreate handleCreate={handleLocationCreate} />
-      </Route>
+        <Route path="/locations">
+          <Locations
+            locations={locations}
+            handleDeleteLocation={handleDeleteLocation}
+            currentUser={props.currentUser}
+          />
+        </Route>
 
-      <Route path="/locations/:id/edit">
-        <LocationEdit
-          locations={locations}
-          handleUpdate={handleUpdateLocation}
-        />
-      </Route>
+        <Route path="/items">
+          <Items
+            items={items}
+            handleDelete={handleDelete}
+            currentUser={props.currentUser}
+          />
+        </Route>
 
-      <Route path="/locations">
-        <Locations
-          locations={locations}
-          handleDeleteLocation={handleDeleteLocation}
-          currentUser={props.currentUser}
-        />
-      </Route>
-
-      <Route path="/items">
-        <Items
-          items={items}
-          handleDelete={handleDelete}
-          currentUser={props.currentUser}
-        />
-      </Route>
-
-      <Route exact path="/">
-        <Homepage />
-      </Route>
-    
-    </Switch>
-
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+      </Switch>
+   
     </div>
   );
 }
