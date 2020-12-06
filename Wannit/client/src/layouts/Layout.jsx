@@ -1,9 +1,9 @@
-import Header  from "../components/Header";
-import Footer from "../components/Footer"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Layout(props) {
-    return (
-      <div>
+  return (
+    <div>
       <div className="App">
         <Header
           currentUser={props.currentUser}
@@ -11,10 +11,8 @@ export default function Layout(props) {
         />
         {props.children}
       </div>
-      <div>
-        <Footer />
-      </div>
 
-      </div>
-    )
-  }
+      <Footer />
+    </div>
+  );
+}

@@ -116,12 +116,8 @@
 .footer {
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
-  height: 50px;
   color: white;
-  position: relative;
-  bottom: 0;
-  box-shadow: 0 20vh 0 20vh #000;
-  padding: 40px;
+  /* box-shadow: 0 5vh 0 5vh #000; */
 }
 
 
