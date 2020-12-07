@@ -1,6 +1,9 @@
 # Wannit
 Wannit Shopping List
 
+link: https://pensive-pare-23737f.netlify.app/register
+
+
 Overview
 
 Wannit is a wish list app that allows users to enter items that they need and then are able to list stores where said items can be bought or picked up.  This tool would be fantastic for those who are attending upcoming birthday parties or holiday events that involve gift exchanges. The Wannit app is the perfect tool to share your gift ideas with others to let them know what you may be interested in.
@@ -60,7 +63,7 @@ client
 src
 |__ components/
   |__ Header.jsx
-  |__ Header.css
+  |__ Footer.jsx	
 |__ containers/
 	|__ MainContainer.jsx
   |__ MainContainer.css
@@ -69,19 +72,14 @@ src
   |__ layout.css
 |__ screens/
 	|__ Homepage.jsx
-  |__ Homepage.css
 	|__ Items.jsx
-  |__ Items.css
 	|__ ItemCreate.jsx
-  |__ ItemCreate.css
 	|__ ItemEdit.jsx
-  |__ ItemEdit.css
+	|__ LocationCreate.jsx
+	|__ LocationEdit.jsx
 	|__ Locations.jsx
-  |__ Locations.css
 	|__ Login.jsx
-  |__ Login.css
 	|__ Register.jsx
-  |__ Register.css
 |__ services/
 	|__ apiConfig.js
 	|__ auth.js
@@ -103,24 +101,24 @@ Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby Boilerplate    |    H     |     3 hrs      |     TBD     |    TBD    |
-| Setup models, controllers and routes    |    H     |     3 hrs      |     TBD     |    TBD    |
-| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Seed Data |    L     |     4 hrs      |     TBD     |     TBD     |
-| Test Data/Routes with Postico and Postman |    M     |     1 hr      |     TBD     |     TBD     |
-| Connect Backend with Frontend |    H     |     1 hr      |     TBD     |     TBD     |
-| Create Login Form |    H     |     2 hrs      |     TBD     |     TBD     |
-| Create Register Form |    H     |     3 hrs      |     TBD     |     TBD     |
-| User Auth Logic Front/Backend |    H     |     5 hrs      |     TBD     |     TBD     |
-| Render All Activity |    H     |     4 hrs      |     TBD     |     TBD     |
-| Implement CRUD on Front End |    H     |     6 hrs      |     TBD     |     TBD     |
-| Implement Comments on Activity Detail Page |    H     |     6 hrs      |     TBD     |     TBD     |
-| CSS Styling Basic |    H     |     3 hrs      |     TBD     |     TBD     |
-| CSS Styling Advanced |    M     |     5 hrs      |     TBD     |     TBD     |
-| Mobile Queries |    M     |     2 hrs      |     TBD     |     TBD     |
-| Debugging |    H     |     6 hrs      |     TBD     |     TBD     |
-| Deployment |    H     |     3 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     60 hrs      |     TBD     |     TBD     |
+| Setup Ruby Boilerplate    |    H     |     3 hrs      |     TBD     |    TBD    | 3 hrs 
+| Setup models, controllers and routes    |    H     |     3 hrs      |     TBD     |    TBD    | 3 hrs
+| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     | 3 hrs
+| Create Seed Data |    L     |     4 hrs      |     TBD     |     TBD     | 4 hrs 
+| Test Data/Routes with Postico and Postman |    M     |     1 hr      |     TBD     |     TBD     | 1 hr
+| Connect Backend with Frontend |    H     |     1 hr      |     TBD     |     TBD     |  1 hr 
+| Create Login Form |    H     |     2 hrs      |     TBD     |     TBD     | 2 hrs 
+| Create Register Form |    H     |     3 hrs      |     TBD     |     TBD     | 3 hrs
+| User Auth Logic Front/Backend |    H     |     5 hrs      |     TBD     |     TBD     | 5 hrs
+| Render All Activity |    H     |     4 hrs      |     TBD     |     TBD     | 4 hrs  
+| Implement CRUD on Front End |    H     |     6 hrs      |     TBD     |     TBD     |  6 hrs 
+| Implement Comments on Activity Detail Page |    H     |     6 hrs      |     TBD     |     TBD     |  6 hrs 
+| CSS Styling Basic |    H     |     3 hrs      |     TBD     |     TBD     | 3 hrs
+| CSS Styling Advanced |    M     |     5 hrs      |     TBD     |     TBD     |  5 hrs 
+| Mobile Queries |    M     |     2 hrs      |     TBD     |     TBD     | 2 hrs
+| Debugging |    H     |     6 hrs      |     TBD     |     TBD     | 6 hrs
+| Deployment |    H     |     3 hrs      |     TBD     |     TBD     | 3 hrs
+| TOTAL               |          |     60 hrs      |     TBD     |     TBD     | 60 hrs
 
 
 Server (Back End)
