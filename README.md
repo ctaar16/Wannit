@@ -128,10 +128,21 @@ https://drive.google.com/file/d/1UQarKMD_3OHPCekUfhyQOtwdBf6NYRz_/view?usp=shari
 
 Post-MVP
 Post-Mvp goals for this project are to:
-1. Implement login/register authentication
+1. Implement Password reset
 2. Make user lists sharable.
 
 Code Showcase
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-Code Issues & Resolutions
-Use this section to list of all major issues encountered and their resolution.
+
+``` currentUser ?
+          <>
+            <p className="user">{currentUser.username}</p>
+            <button className="button"  onClick={handleLogout}>Logout</button>
+          </>
+          :
+        <>
+        {location.pathname !== "/login" && location.pathname !== "/register" && 
+        <Link  to='/login'><button className ="button">Login / Register</button></Link>
+        }```
+	
+I am proud of this ternary statement that allows for the login/register button to display only on the homepage.  I received help from David W. in creating this code.
+
