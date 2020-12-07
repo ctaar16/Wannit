@@ -1,7 +1,7 @@
 # Wannit
 Wannit Shopping List
 
-link: https://pensive-pare-23737f.netlify.app/register
+link: https://wannit.netlify.app/
 
 
 Overview
