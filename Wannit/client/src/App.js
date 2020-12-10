@@ -45,14 +45,14 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="mid">
       <Layout
       currentUser={currentUser}
       handleLogout={handleLogout}
       >
       <Switch>
 
-      
+    
         <Route path='/login'>
           {/* login */}
           <Login handleLogin={handleLogin} />

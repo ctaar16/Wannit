@@ -1,47 +1,53 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function LocationEdit(props) {
   const [formData, setFormData] = useState({
-    name: ''
-  })
+    name: "",
+  });
   const { id } = useParams();
 
   useEffect(() => {
     const prefillForm = () => {
-      const locationLocation = props.locations.find(location => location.id === Number(id));
+      const locationLocation = props.locations.find(
+        (location) => location.id === Number(id)
+      );
       setFormData({
-        name: locationLocation.name
-      })
-    }
-    if (props.locations.length){
+        name: locationLocation.name,
+      });
+    };
+    if (props.locations.length) {
       prefillForm();
     }
-  }, [props.locations])
+  }, [props.locations]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      props.handleUpdate(id, formData);
-    }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        props.handleUpdate(id, formData);
+      }}
+    >
       <h3>Edit Location</h3>
-      <label>Name:
-        <input className="box"
-          type='text'
-          name='name'
+      <label>
+        Name:
+        <input
+          className="box"
+          type="text"
+          name="name"
           value={formData.name}
           onChange={handleChange}
         />
       </label>
       <button>Submit</button>
     </form>
-  )
+  );
 }

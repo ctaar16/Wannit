@@ -1,16 +1,15 @@
-
 * {
   text-align: center;
-  font-family: 'Libre Franklin', sans-serif;;
-  
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .App {
-height: 100vh;
-background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
+  background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
-.header{
+.header {
   height: auto;
   color: white;
   background-repeat: no-repeat;
@@ -21,6 +20,11 @@ background-image: url(https://image.shutterstock.com/image-illustration/illustra
   background-position: bottom;
 }
 
+.divbody{
+  background-image: url(https://img.lovepik.com/free_png/32/65/39/55358PICf7558PIC9b0f759qF_PIC2018.png_860.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 
 .username {
@@ -29,63 +33,56 @@ background-image: url(https://image.shutterstock.com/image-illustration/illustra
   justify-content: center;
 }
 
-.button{
+.button {
   color: white;
-  background-color: rgb(121, 20, 20) ;
+  background-color: rgb(121, 20, 20);
   padding: 5px;
-  margin:2px;
+  margin: 2px;
   border-radius: 10px;
 }
 
-.input{
+.input {
   justify-content: center;
+  width: 240px;
 }
 
 .li {
   font-size: 14px;
 }
 
-.text{
+.text {
   color: white;
 }
 
-.box{
+::placeholder,
+.box,
+.list,
+.title {
   color: black;
 }
 
-
-::placeholder{
-  color: black;
-}
-
-.text1{
+.text1 {
   font-size: 30px;
   color: white;
   text-decoration: none;
   padding: 10px 0px 30px;
 }
 
-.text2{
+.text2 {
   font-size: 30px;
   color: white;
   text-decoration: none;
 }
 
-
-.list{
-  color:black;
-}
-
-.itemsb{
+.itemsb {
   color: white;
-  padding: px;
   font-size: 18px;
   display: flexbox;
   flex-direction: row;
 }
 
 .locationsb {
-  color:black;
+  color: black;
   padding: 3px;
   font-size: 18px;
 }
@@ -97,75 +94,54 @@ background-image: url(https://image.shutterstock.com/image-illustration/illustra
   text-align: center;
 }
 
-.title {
-  color:black;
-}
-
-.Appname{
-  color:rgb(241, 242, 249);
+.Appname {
+  color: rgb(241, 242, 249);
   font-size: 150px;
 }
 
-
-.slogan{
+.slogan {
   font-size: 80px;
 }
 
-.line{
+.line {
   opacity: 0;
 }
 
 .footer {
-  background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
+  background-color:black;
   background-size: cover;
   color: white;
-  
-  /* box-shadow: 0 5vh 0 5vh #000; */
 }
 
-.kashiff{
+.kashiff {
   height: 20vh;
 }
 
-.reg, .login {
+.reg,
+.login {
   background-image: url(https://image.shutterstock.com/image-illustration/illustration-nice-background-grey-stone-260nw-137549018.jpg);
   background-size: cover;
   height: 110vh;
 }
 
-.user{
+.user {
   font-size: 40px;
-  -webkit-text-stroke: .7px black;
+  -webkit-text-stroke: 0.7px black;
 }
 
 .home {
   color: white;
 }
 
-.mid{
-  padding: 100px
-}
-
-
-.ch{
-padding: 40px;
-}
-
-
-
-
-
 
 @media screen and (max-width: 760px) {
   .App {
     font-size: 1.5rem;
   }
-
-  .Appname{
+  .Appname {
     font-size: 5rem;
   }
-
-  .slogan{
+  .slogan {
     font-size: 2rem;
   }
 }
@@ -174,10 +150,10 @@ padding: 40px;
   .Appname {
     font-size: 2rem;
   }
-  .Appname{
+  .Appname {
     font-size: 5rem;
   }
-  .slogan{
+  .slogan {
     font-size: 2rem;
   }
 }

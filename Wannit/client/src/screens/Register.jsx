@@ -18,7 +18,6 @@ export default function Register(props) {
 
   return (
     <div className="reg">
-      
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -26,37 +25,40 @@ export default function Register(props) {
         }}
       >
         <h3 className="username">Register</h3>
-      
-          <br/>
-          <input className="input"
-            placeholder= "Username"
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
-    
-        <br/>
-      
-          <input className="input"
-            placeholder ="Email"
-            type="text"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-      
+
         <br />
-      
-          <input className="input"
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-       
-        <br/>
+        <input
+          className="input"
+          placeholder="Username"
+          type="text"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+
+        <br />
+
+        <input
+          className="input"
+          placeholder="Email"
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+
+        <br />
+
+        <input
+          className="input"
+          placeholder="Password"
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+
+        <br />
 
         <div>
           <button className="button">Submit</button>

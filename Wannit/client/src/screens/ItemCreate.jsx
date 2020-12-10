@@ -1,33 +1,36 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function ItemCreate(props) {
   const [formData, setFormData] = useState({
-    name: ''
-  })
+    name: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      props.handleCreate(formData);
-    }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        props.handleCreate(formData);
+      }}
+    >
       <h3>Create Item</h3>
-      <label>Name:
+      <label>
+        Name:
         <input
-          type='text'
-          name='name'
+          type="text"
+          name="name"
           value={formData.name}
           onChange={handleChange}
         />
       </label>
-      <button className = "button">Submit</button>
+      <button className="button">Submit</button>
     </form>
-  )
+  );
 }

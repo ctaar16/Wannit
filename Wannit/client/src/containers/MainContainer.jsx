@@ -132,7 +132,6 @@ export default function MainContainer(props) {
           <Homepage />
         </Route>
       </Switch>
-   
     </div>
   );
 }

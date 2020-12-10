@@ -9,12 +9,10 @@ export default function Layout(props) {
           currentUser={props.currentUser}
           handleLogout={props.handleLogout}
         />
-        <div className="kashiff">
-        {props.children}
-        </div>
+        <div className="kashiff">{props.children}</div>
       </div>
 
-        <Footer />
+      <Footer />
     </div>
   );
 }
